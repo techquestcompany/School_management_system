@@ -1,0 +1,24 @@
+name: Unit test for the project
+on:
+   push:
+        branches:
+            -"**"
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        #Steps to go through to run the tests
+        steps:
+        - name: checkout code
+          uses: actions/checkout@v3
+        #set up or install node on the virual machine
+        - name: setup node
+          uses: actions/setup-node@v3
+          with: 
+              Node-version: "18"
+        - name: install dependencies
+          run: npm install
+          #run the unit tests
+        - name: run unit test
+          run: npm tests
+          env:
+            CI: true
