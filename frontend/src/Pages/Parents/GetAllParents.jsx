@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import "./getAllTeachers.css"
+import "./getAllParents.css"
 
-const GetAllTeachers = () => {
+const GetAllParents = () => {
   // State to store the list of teachers
   const [teachers, setTeachers] = useState([]);
 
@@ -9,7 +9,7 @@ const GetAllTeachers = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Fetch all teachers when the component is mounted
+   
   useEffect(() => {
     fetchTeachers();
   }, []);
@@ -24,7 +24,7 @@ const GetAllTeachers = () => {
       setError('Error fetching teachers');
       setLoading(false);
     }
-  };
+  };                    
 
   // Function to delete a teacher
   const deleteTeacher = async (id) => {
@@ -40,7 +40,7 @@ const GetAllTeachers = () => {
 
   // Function to update a teacher's information (this can be enhanced with a modal or form)
   const updateTeacher = (id) => {
-    // In a real-world application, you would display a form for updating the teacher's info.
+    
     alert(`Update teacher with ID: ${id}`);
   };
 
@@ -57,20 +57,23 @@ const GetAllTeachers = () => {
             <th>ID</th>
             <th>Name</th>
             <th>Email</th>
-            <th>Subject</th>
+            <th>Location</th>
+            <th>Telephone</th>
             <th>Actions</th>
           </tr>
         </thead>
         <tbody>
-          {teachers.map((teacher) => (
-            <tr key={teacher.id}>
-              <td>{teacher.id}</td>
-              <td>{teacher.name}</td>
-              <td>{teacher.email}</td>
-              <td>{teacher.subject}</td>
+          {teachers.map((parent) => (
+            <tr key={parent.id}>
+              <td>{parent.id}</td>
+              <td>{parent.name}</td>
+              <td>{parent.email}</td>
+              <td>{parent.location}</td>
+              <td>{parent.Telephone}</td>
+              <td>{parent.subject}</td>
               <td>
-                <button onClick={() => updateTeacher(teacher.id)}>Update</button>
-                <button onClick={() => deleteTeacher(teacher.id)}>Delete</button>
+                <button onClick={() => updateTeacher(parent.id)}>Update</button>
+                <button onClick={() => deleteTeacher(parent.id)}>Delete</button>
               </td>
             </tr>
           ))}
@@ -80,4 +83,4 @@ const GetAllTeachers = () => {
   );
 };
 
-export default GetAllTeachers;
+export default GetAllParents;
