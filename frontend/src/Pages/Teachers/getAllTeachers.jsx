@@ -16,7 +16,7 @@ const GetAllTeachers = () => {
 
   const fetchTeachers = async () => {
     try {
-      const response = await fetch('/api/teachers');  
+      const response = await fetch('/api/teachers');  // Replace with your actual API endpoint
       const data = await response.json();
       setTeachers(data);
       setLoading(false);
