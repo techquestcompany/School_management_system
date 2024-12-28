@@ -1,0 +1,122 @@
+.attendance-container {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: start;
+  width: 100%;
+  gap: 20px;
+}
+
+.calendar-container {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+select {
+  padding: 12px;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  border-radius: 4px;
+}
+
+.attendance-list {
+  flex: 3;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.attendance-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.attendance-list table tr {
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.attendance-list td{
+  padding: 12px;
+}
+
+.attendance-list th {
+  padding: 12px;
+  font-size: 20px;
+}
+
+.attendance-list table th:nth-child(3) {
+  text-align: center;
+}
+
+.present-button {
+  color: green;
+  background-color: transparent;
+  border: 1px solid green;
+}
+
+.absent-button {
+  color: red;
+  background-color: transparent;
+  border: 1px solid red;
+}
+
+.save-attendance-btn {
+  margin-top: 20px;
+  padding: 16px;
+  background-color: #3498db;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+/* **************** REACT CALENDAR ***************** */
+.react-calendar {
+  width: 100%;
+  background: white;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.react-calendar button {
+  color: black;
+}
+/* Tile customization */
+.react-calendar__tile {
+  padding: 10px;
+  text-align: center;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+.react-calendar__tile:hover {
+  background: #f0f8ff;
+  cursor: pointer;
+}
+
+.react-calendar__tile--active {
+  background: #3498db;
+  color: white;
+}
+
+.react-calendar__tile--highlight {
+  background: #f4f4f4;
+  color: #3498db;
+}
+
+/* Header styling */
+.react-calendar__navigation button {
+  color: #3498db;
+  font-size: 16px;
+  margin: 2px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}

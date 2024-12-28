@@ -1,4 +1,3 @@
-// src/components/Sidebar.js
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaHome, FaUsers, FaDollarSign, FaChalkboardTeacher, FaCog, FaSignOutAlt } from 'react-icons/fa';
@@ -47,7 +46,7 @@ const sidebarStyle = {
   width: '200px',
   backgroundColor: '#2c3e50',
   color: '#fff',
-  height: '100vh',
+  height: "100%",
   paddingTop: '20px',
 };
 

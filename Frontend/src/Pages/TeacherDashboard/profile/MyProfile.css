@@ -1,0 +1,71 @@
+.profile-view {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  gap: 20px;
+}
+
+.profile-summary {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  height: 600px;
+}
+
+.profile-details {
+  flex: 3;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.profile-picture {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.class-students {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.subjects-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  overflow: auto;
+  width: 100%;
+  list-style: none;
+}
+
+.subjects-list li {
+  padding: 8px;
+}
+
+.profile-details-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.profile-details-table tr {
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.profile-details-table td{
+  padding: 20px;
+}
+
+.profile-details-section {
+  text-align: center;
+  padding: 8px;
+}
